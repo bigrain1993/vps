@@ -25,9 +25,8 @@ VPS 从零开始
         * [3.ShadowsocksR](#shadowsocksr)
         * [4.Debian/Ubuntu TCP BBR](#debian/ubuntu-tcp-bbr)
         * [5 Apache2](#apache2)
-        * [2.Python virtualenv ](#python-virtualenv)
-        * [3.ShadowsocksR](#shadowsocksr)
-        * [3.Google coloud](#google-coloud)        
+        * [6.Python virtualenv ](#python-virtualenv)  
+        
 ### 购买后必须做的事情
 
 
@@ -239,8 +238,9 @@ apt-get install apache2
 **还可以去下载一些HML5的页面放在/var/www/html/文件夹内 通过  IP地址/XXX 访问（比如放一些游戏页面）**
 
 
+### 临时邮箱系统forsaken-mail/Mailsac  
 
-### 临时邮箱系统forsaken-mail/Mailsac （学习小马甲大佬的教程 http://51.ruyo.net/p/3210.html）
+临时邮箱系统forsaken-mail/Mailsac （学习小马甲大佬的教程 http://51.ruyo.net/p/3210.html）
 1.forsaken-mail ：https://github.com/denghongcai/forsaken-mail
 最简单的方法是使用Docker安装
 ```
