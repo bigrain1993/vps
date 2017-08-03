@@ -177,7 +177,7 @@ wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh 
 ### Debian/Ubuntu TCP BBR 改进版/增强版 (转自萌咖大佬的脚本https://moeclub.org/2017/06/24/278/）
 准备:
 使用前,请确认能够开启BBR.
-可参考: [Debian/Ubuntu 开启 TCP BBR 拥塞算法][3]
+可参考: [Debian/Ubuntu 开启 TCP BBR 拥塞算法](https://moeclub.org/2017/06/06/249/)
 或者直接执行此命令进行开启.
 
 ```
