@@ -22,11 +22,8 @@ VPS 从零开始
     * [日常使用软件](#日常使用软件)
         * [1.Screen]()  
         * [2.Python virtualenv ]()  
-         * [3.ShadowsocksR](#ShadowsocksR)  
-        * [3.Google coloud]()
-
-
-
+        * [3.ShadowsocksR]()  
+        * [3.Google coloud]()  
 
 ### 购买后必须做的事情
 
