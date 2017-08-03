@@ -19,7 +19,7 @@ VPS 从零开始
         * [1.测试速度](#测试速度)
         * [2.查询vps的虚拟架构](#查询vps的虚拟架构)
         * [3.最重要的安全](#最重要的安全)
-        * [4.Google coloud](https://cloud.google.com/)
+        * [4.有问题就重启再说](#有问题就重启再说)
   * [日常使用软件](#日常使用软件)
         * [介绍下我用过的一些简单VPS](#开发环境恢复)
         * [1.Vultr](https://www.vultr.com)
@@ -35,11 +35,11 @@ VPS 从零开始
 
 
 ##### 测试速度
-#####1.    网络测速
+1.网络测速
 ```
 wget -O speedtest-cli https://raw.github.com/sivel/speedtest-cli/master/speedtest.py && chmod +x speedtest-cli && ./speedtest-cli
 ```
-#####2.  I/O测速 转自萌咖大佬的脚本 https://moeclub.org/2017/07/01/299/
+2.I/O测速 转自萌咖大佬的脚本 https://moeclub.org/2017/07/01/299/
 ```
 bash -c "$(wget –no-check-certificate -qO- 'https://moeclub.org/attachment/LinuxShell/bench.sh')"
 ```
@@ -91,6 +91,74 @@ yum install denyhosts
 cat /var/log/secure|awk '/Failed/{print $(NF-3)}'|sort|uniq -c|awk '{print $2"="$1;}'
 ```
 ![Eudic](https://www.freehao123.com/wp-content/uploads/2013/10/vps-sh_15.gif)
+### 有问题就重启再说
+```
+reboot
+```
+---------------------------------------------------------------------------------------------------------------------------------------
+### 日常使用软件
+
+### screen (转自 VPS侦探 https://www.vpser.net）
+screen命令使用方法
+1、常用的使用方法
+
+用来解决文章开始我们遇到的问题，比如在安装lnmp时。
+
+1.1 创建screen会话
+
+可以先执行：screen -S lnmp ，screen就会创建一个名字为lnmp的会话。
+1.2 暂时离开，保留screen会话中的任务或程序
+
+当需要临时离开时（会话中的程序不会关闭，仍在运行）可以用快捷键Ctrl+a d(即按住Ctrl，依次再按a,d)
+
+1.3 恢复screen会话
+
+当回来时可以再执行执行：screen -r lnmp 即可恢复到离开前创建的lnmp会话的工作界面。如果忘记了，或者当时没有指定会话名，可以执行：screen -ls screen会列出当前存在的会话列表，如下图：
+![Eudic](https://www.vpser.net/uploads/2010/10/screen-ls.jpg)
+11791.lnmp即为刚才的screen创建的lnmp会话，目前已经暂时退出了lnmp会话，所以状态为Detached，当使用screen -r lnmp后状态就会变为Attached，11791是这个screen的会话的进程ID，恢复会话时也可以使用：screen -r 11791
+
+1.4 关闭screen的会话
+
+执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。
+
+### python virtualenv 虚拟环境（转自狗仔小分队 http://xiaofd.win/index.php/archives/6/）
+安装
+```
+pip install virtualenv
+```
+基本使用
+
+创建虚拟环境
+```
+cd my_folder
+virtualenv venv  # 在当前目录下新建venv目录，并安装默认版本的pyhon
+virtualenv -p /usr/bin/python2.7 venv2 # 安装指定版本的python
+virtualenv -p C:\Anaconda3\python.exe venv3 # 以windows为例安装pyton3环境
+```
+激活虚拟环境
+```
+# linux
+source venv/bin/activate
+# windows 用cmd执行(powershell执行会报错)
+venv\Scripts\activate
+```
+离开虚拟环境
+```
+# linux  ## linux在venv目录下可以直接使用deactive命令退出环境
+source venv/bin/deactivate
+#windows 用cmd执行(powershell执行会报错)
+venv\Scripts\deactivate
+```
+删除虚拟机
+```
+rmvirtualenv my_project
+```
+导出与恢复
+```
+pip freeze > requirements.txt
+# pip list # 显示已安装库
+pip install -r requirements.txt
+```
 
 
 
