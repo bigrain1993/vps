@@ -1,7 +1,6 @@
 # VPS
 VPS 从零开始
 
-<!-- vim-markdown-toc GFM -->
 * [是什么](https://en.wikipedia.org/wiki/VPS)
 
      * [1. 你肯定已经知道了要不然你搜索什么]
