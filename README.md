@@ -20,10 +20,10 @@ VPS 从零开始
         * [3.最重要的安全](#最重要的安全)
         * [4.有问题就重启再说](#有问题就重启再说)
     * [日常使用软件](#日常使用软件)
-        * [1 Screen](#jump1)  
-        * [2.Python virtualenv ](#jump2)
+        * [1.Screen]()  
+        * [2.Python virtualenv ]()
         * [3.ShadowsocksR](#ShadowsocksR)  
-        * [3.Google coloud](https://cloud.google.com/)
+        * [3.Google coloud]()
 
 
 
