@@ -20,10 +20,10 @@ VPS 从零开始
         * [3.最重要的安全](#最重要的安全)
         * [4.有问题就重启再说](#有问题就重启再说)
     * [日常使用软件](#日常使用软件)
-        * [1 Screen](#screen)
-        * [2.Python virtualenv ](#python-virtualenv)
-        * [3.ShadowsocksR](#shadowsocksr)
-        * [3.Google coloud](#google-coloud)
+        * [1 screen](#screen)
+        * [2.python virtualenv ](#python-virtualenv)
+        * [3.shadowsocksr](#shadowsocksr)
+        * [3.soogle coloud](#google-coloud)
 ### 购买后必须做的事情
 
 
