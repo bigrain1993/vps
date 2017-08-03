@@ -126,7 +126,8 @@ Screen命令使用方法
 
 执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。
 <span id="jump2"></span>  
-###python virtualenv 虚拟环境（转自狗仔小分队 http://xiaofd.win/index.php/archives/6/）
+
+### python virtualenv 虚拟环境（转自狗仔小分队 http://xiaofd.win/index.php/archives/6/）
 
 安装
 ```
