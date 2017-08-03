@@ -129,7 +129,7 @@ Screen命令使用方法
 
 执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。
 <span id="jump2"></span>  
-### python virtualenv  
+### Python virtualenv  
 
 python virtualenv 虚拟环境 转自[狗仔小分队](http://xiaofd.win/index.php/archives/6/)
 
@@ -175,7 +175,7 @@ pip install -r requirements.txt
 ```
 wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh && bash ssr.sh #下载后可以使用bsah ssr.sh查看以及修改配置
 ```
-### Debian/Ubuntu TCP BBR 改进版/增强版 (转自萌咖大佬的脚本https://moeclub.org/2017/06/24/278/）
+### Debian/Ubuntu TCP BBR 改进版/增强版 转自[萌咖](https://moeclub.org/2017/06/24/278/)大佬的脚本
 准备:
 使用前,请确认能够开启BBR.
 可参考: [Debian/Ubuntu 开启 TCP BBR 拥塞算法](https://moeclub.org/2017/06/06/249/)
