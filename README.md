@@ -4,8 +4,7 @@ VPS 从零开始
 
 * [是什么](https://en.wikipedia.org/wiki/VPS)
 
-    1.你肯定已经知道了要不然你搜索什么
-    <br> 
+    1.你肯定已经知道了要不然你搜索什么  
     2.简单说的话就是一台放在别处的，永不关机的电脑
         
 * [购买](#重建软件环境)
@@ -22,7 +21,7 @@ VPS 从零开始
         * [4.有问题就重启再说](#有问题就重启再说)
     * [日常使用软件](#日常使用软件)
         * [1 Screen](#jump1)  
-        * [2.Python virtualenv ](#jump2)  
+        * [2.Python virtualenv ](#jump2)
         * [3.ShadowsocksR](#ShadowsocksR)  
         * [3.Google coloud](https://cloud.google.com/)
 
