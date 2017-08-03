@@ -23,7 +23,7 @@ VPS 从零开始
         * [1 Screen](#screen)
         * [2.Python virtualenv ](#python-virtualenv)
         * [3.ShadowsocksR](#shadowsocksr)
-        * [4.Debian/Ubuntu TCP BBR](#debian/ubuntu-tcp-bbr)
+        * [4.Debian/Ubuntu TCP BBR](#debian-ubuntu-tcp-bbr)
         * [5 Apache2](#apache2)
         * [6.临时邮箱系统](#临时邮箱系统)  
         
