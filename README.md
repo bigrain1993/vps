@@ -227,6 +227,7 @@ apt-get update
 apt-get install apache2
 ```
 安装后访问你的IP就可以看到效果 修改/var/www/html/index.html修改默认页面
+<br>
 **还可以去下载一些HML5的页面放在/var/www/html/文件夹内 通过  IP地址/XXX 访问（比如放一些游戏页面）**
 
 
