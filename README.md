@@ -3,9 +3,10 @@ VPS 从零开始
 
 <!-- vim-markdown-toc GFM -->
 * [VPS是什么]
-     * [1. 你肯定已经知道了要不然你搜索什么]
-     * [2. 简单说的话就是一台放在别处的，永不关机的电脑]
-     * [3. 维基百科VPS] https://en.wikipedia.org/wiki/VPS
+
+      * [1. 你肯定已经知道了要不然你搜索什么]
+      * [2. 简单说的话就是一台放在别处的，永不关机的电脑]
+      * [3. 维基百科VPS] https://en.wikipedia.org/wiki/VPS
         
 * [购买](#重建软件环境)
 
