@@ -169,7 +169,7 @@ pip freeze > requirements.txt
 # pip list # 显示已安装库
 pip install -r requirements.txt
 ```
-### ShadowsocksR （目前经常使用的是[Doubi][1]大佬的脚本 心疼[BreakWa11][2]小姐姐）
+### ShadowsocksR （目前经常使用的是[Doubi][https://doub.io/]大佬的脚本 心疼[BreakWa11][2]小姐姐）
 安装
 ```
 wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh && bash ssr.sh #下载后可以使用bsah ssr.sh查看以及修改配置
