@@ -23,6 +23,7 @@ VPS 从零开始
         * [1 Screen](#screen)
         * [2.Python virtualenv ](#python-virtualenv)
         * [3.ShadowsocksR](#shadowsocksr)
+        * [5 Debian/Ubuntu TCP BBR](#debian/ubuntu-tcp-bbr)
         * [5 Apache2](#apache2)
         * [6.临时邮箱系统](#临时邮箱系统)  
         
@@ -178,8 +179,8 @@ pip install -r requirements.txt
 ```
 wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh && bash ssr.sh #下载后可以使用bsah ssr.sh查看以及修改配置
 ```
-### Debian/Ubuntu TCP BBR
-### debian/ubuntu-tcp-bbr
+### Debian/Ubuntu TCP BBR  
+
 Debian/Ubuntu TCP BBR 改进版/增强版 转自[萌咖](https://moeclub.org/2017/06/24/278/)大佬的脚本
 准备:
 使用前,请确认能够开启BBR.
