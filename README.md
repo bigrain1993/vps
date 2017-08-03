@@ -34,7 +34,7 @@ VPS 从零开始
 ### 购买后必须做的事情
 
 
-##### 测试速度
+### 测试速度
 1.网络测速
 ```
 wget -O speedtest-cli https://raw.github.com/sivel/speedtest-cli/master/speedtest.py && chmod +x speedtest-cli && ./speedtest-cli
