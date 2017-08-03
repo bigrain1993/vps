@@ -65,9 +65,12 @@ ssh-keygen -t rsa #创建密钥
 cd .ssh #进入密钥文件夹 使用cat查看文件或者用cp复制到桌面用putty或者MobaXterm导入key
 ```
 三、增强VPS 账号安全方法三：禁用Root账号
-1、如果你已经设置SSH密钥登录的方式，就可以禁用Root账号了，或者你可以新建一个VPS账号。执行以下命令：<br>
-    useradd kristina #添加用户名
-    passwd 12345678 #为kristina用户名设置密码
+1、如果你已经设置SSH密钥登录的方式，就可以禁用Root账号了，或者你可以新建一个VPS账号。执行以下命令：
+<br>
+useradd kristina #添加用户名
+<br>
+passwd 12345678 #为kristina用户名设置密码
+<br>
 2、然后编辑进入配置：
 ```vim /etc/ssh/sshd_config```
 找到PermitRootLogin yes，然后后面的Yes改no，如果没有这一行命令，直接将：PermitRootLogin no 加进去。
