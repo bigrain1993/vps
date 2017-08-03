@@ -23,7 +23,7 @@ VPS 从零开始
         * [1 Screen](screen)
         * [2.Python virtualenv ](python-virtualenv)
         * [3.ShadowsocksR](shadowsocksr)
-        * [3.Google coloud](google-coloud)
+        * [3.Google coloud](google-coloud)
 ### 购买后必须做的事情
 
 
