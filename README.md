@@ -23,7 +23,7 @@ VPS 从零开始
     * [日常使用软件](#日常使用软件)
         * [1 Screen](#jump1)
         * [2.Python virtualenv ](#jump2)
-        * [3.ShadowsocksR](#shadowsocksr)
+        * [3.ShadowsocksR](#ShadowsocksR)
         * [3.Google coloud](https://cloud.google.com/)
 
 
