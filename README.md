@@ -97,7 +97,7 @@ reboot
 ---------------------------------------------------------------------------------------------------------------------------------------
 ### 日常使用软件
 <span id="jump1"></span>
-### Screen (转自 VPS侦探 https://www.vpser.net）
+### screen (转自 VPS侦探 https://www.vpser.net）
 Screen命令使用方法
 1、常用的使用方法
 
@@ -126,7 +126,7 @@ Screen命令使用方法
 
 执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。
 <span id="jump2"></span>
-### Python virtualenv 虚拟环境（转自狗仔小分队 http://xiaofd.win/index.php/archives/6/）
+### python virtualenv 虚拟环境（转自狗仔小分队 http://xiaofd.win/index.php/archives/6/）
 安装
 ```
 pip install virtualenv
@@ -164,7 +164,7 @@ pip freeze > requirements.txt
 # pip list # 显示已安装库
 pip install -r requirements.txt
 ```
-### ShadowsocksR （目前经常使用的是[Doubi](https://doub.io)大佬的脚本 心疼[BreakWa11](https://breakwa11.blogspot.jp)小姐姐）
+### shadowsocksr （目前经常使用的是[Doubi](https://doub.io)大佬的脚本 心疼[BreakWa11](https://breakwa11.blogspot.jp)小姐姐）
 安装
 ```
 wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh && bash ssr.sh #下载后可以使用bsah ssr.sh查看以及修改配置
