@@ -23,9 +23,9 @@ VPS 从零开始
         * [1 Screen](#screen)
         * [2.Python virtualenv ](#python-virtualenv)
         * [3.ShadowsocksR](#shadowsocksr)
-        * [5 Debian/Ubuntu TCP BBR](#debian/ubuntu-tcp-bbr)
-        * [5 Apache2](#apache2)
-        * [6.临时邮箱系统](#临时邮箱系统)  
+        * [4 Apache2](#apache2)
+        * [5.临时邮箱系统](#临时邮箱系统)
+        * [5 Debian/Ubuntu TCP BBR](#debian/ubuntu-tcp-bbr)
         
 ### 购买后必须做的事情
 
