@@ -4,9 +4,9 @@ VPS 从零开始
 <!-- vim-markdown-toc GFM -->
 * [VPS是什么]
 
-      * [1. 你肯定已经知道了要不然你搜索什么]
-      * [2. 简单说的话就是一台放在别处的，永不关机的电脑]
-      * [3. 维基百科VPS] https://en.wikipedia.org/wiki/VPS
+     * [1. 你肯定已经知道了要不然你搜索什么]
+     * [2. 简单说的话就是一台放在别处的，永不关机的电脑]
+     * [3. 维基百科VPS] https://en.wikipedia.org/wiki/VPS
         
 * [购买](#重建软件环境)
 
@@ -20,10 +20,10 @@ VPS 从零开始
         * [2.查询vps的虚拟架构](#查询vps的虚拟架构)
         * [3.最重要的安全](#最重要的安全)
         * [4.有问题就重启再说](#有问题就重启再说)
-    * [日常使用软件](#日常使用软件)
-        * [介绍下我用过的一些简单VPS](#开发环境恢复)
-        * [1.Vultr](https://www.vultr.com)
-        * [2.Linode](https://www.linode.com/)
+  * [日常使用软件](#日常使用软件)
+        * [1 Screen](#jump1)
+        * [2.Python virtualenv ](#jump2)
+        * [3.ShadowsocksR](#jump3)
         * [3.Google coloud](https://cloud.google.com/)
        
 
@@ -97,9 +97,9 @@ reboot
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------
 ### 日常使用软件
-
-### screen (转自 VPS侦探 https://www.vpser.net）
-screen命令使用方法
+<span id="jump1"></span>
+### Screen (转自 VPS侦探 https://www.vpser.net）
+Screen命令使用方法
 1、常用的使用方法
 
 用来解决文章开始我们遇到的问题，比如在安装lnmp时。
@@ -114,16 +114,14 @@ screen命令使用方法
 1.3 恢复screen会话
 
 当回来时可以再执行执行：screen -r lnmp 即可恢复到离开前创建的lnmp会话的工作界面。如果忘记了，或者当时没有指定会话名，可以执行：screen -ls screen会列出当前存在的会话列表，如下图：
-
 ![Eudic](https://www.vpser.net/uploads/2010/10/screen-ls.jpg)
-
 11791.lnmp即为刚才的screen创建的lnmp会话，目前已经暂时退出了lnmp会话，所以状态为Detached，当使用screen -r lnmp后状态就会变为Attached，11791是这个screen的会话的进程ID，恢复会话时也可以使用：screen -r 11791
 
 1.4 关闭screen的会话
 
 执行：exit ，会提示：[screen is terminating]，表示已经成功退出screen会话。
-
-### python virtualenv 虚拟环境（转自狗仔小分队 http://xiaofd.win/index.php/archives/6/）
+<span id="jump2"></span>
+### Python virtualenv 虚拟环境（转自狗仔小分队 http://xiaofd.win/index.php/archives/6/）
 安装
 ```
 pip install virtualenv
@@ -161,29 +159,98 @@ pip freeze > requirements.txt
 # pip list # 显示已安装库
 pip install -r requirements.txt
 ```
+### ShadowsocksR （目前经常使用的是[Doubi][1]大佬的脚本 心疼[BreakWa11][2]小姐姐）
+安装
+```
+wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh && bash ssr.sh #下载后可以使用bsah ssr.sh查看以及修改配置
+```
+### Debian/Ubuntu TCP BBR 改进版/增强版 (转自萌咖大佬的脚本https://moeclub.org/2017/06/24/278/）
+准备:
+使用前,请确认能够开启BBR.
+可参考: [Debian/Ubuntu 开启 TCP BBR 拥塞算法][3]
+或者直接执行此命令进行开启.
+
+```
+wget --no-check-certificate -qO 'BBR.sh' 'https://moeclub.org/attachment/LinuxShell/BBR.sh' && chmod a+x BBR.sh && bash BBR.sh -f
+```
+注意:执行此命令会自动重启.
+
+一键安装:
+```
+wget --no-check-certificate -qO 'BBR_POWERED.sh' 'https://moeclub.org/attachment/LinuxShell/BBR_POWERED.sh' && chmod a+x BBR_POWERED.sh && bash BBR_POWERED.sh
+```
+####**说明**:
+执行过程中会重新编译模块.
+模块默认为开机自动加载.
+模块名称:`tcp_bbr_powered`
+可用 `modprobe tcp_bbr_powered` 命令进行加载模块.
+可执行 `lsmod |grep 'bbr_powered' `
+结果不为空,则加载模块成功
+可执行 `sysctl -w net.ipv4.tcp_congestion_control=bbr_powered` 使用此模块.
+以上只是说明,直接使用一键脚本即可.
+#### **注意事项**:
+如遇报错:`Error! Header not be matched by Linux Kernel.`
+请用使用本博客提供的脚本重新开启BBR,或使用-f参数.可参考本篇中的准备步骤.
+如遇报错:`Error! Install make`或`Error! Install gcc.`
+首先尝试`apt-get update`再次执行此脚本.
+如果未解决想办法自行安装`gcc(>=4.9)`或切换系统后再试.
+本脚本在**Debian8,Debian9,Ubuntu16.04**上通过测试.
+####**自行安装gcc-4.9** 
+运行
+```
+readlink `which gcc`
+```
+可以查看gcc版本
+运行以下代码可以安装gcc4.9至系统
+```
+apt-get update
+apt-get install software-properties-common
+add-apt-repository ppa:ubuntu-toolchain-r/test
+apt-get update
+apt-get install g++-4.9
+ln -sf `which gcc-4.9` /usr/bin/gcc
+```
+### 安装web服务 Apache2(最简单的方法让你的VPS变成一个网站）
+
+```
+apt-get update
+apt-get install apache2
+```
+安装后访问你的IP就可以看到效果 修改/var/www/html/index.html修改默认页面
+**还可以去下载一些HML5的页面放在/var/www/html/文件夹内 通过  IP地址/XXX 访问（比如放一些游戏页面）**
 
 
 
+### 临时邮箱系统forsaken-mail/Mailsac （学习小马甲大佬的教程 http://51.ruyo.net/p/3210.html）
+1.forsaken-mail ：https://github.com/denghongcai/forsaken-mail
+最简单的方法是使用Docker安装
+```
+apt-get update
+apt-get install -y docker.io #安装docker
+service docker start #启动docker
+docker run --name forsaken-mail -d -p 25:25 -p 3000:3000 malaohu/forsaken-mail #安装forsaken-mail 并运行
+```
+运行后去你的域名管理后台添加域名解析
 
-- 搜狗输入法:
+|记录类型       | 主机记录    | 解析线路| 记录值    | MX优先路|
+| ------------- |-------------| :--------:|-------------| -------------| 
+| MX            | @           |  默认     |域名         | 1            |
+| A             | @           |  默认     | IP地址      |  --          |
 
-  安装搜狗输入法时，brew 会有提示:
+打开http://域名:3000 访问页面
 
-  ```
-  To complete the installation of Cask sogouinput, you must also run the installer at  '/usr/local/Caskroom/sogouinput/3.7.0.1459/安装搜狗输入法.app'
-  ```
+2 Mailsac临时邮箱 原作者开源地址 https://github.com/ruffrey/mailsac
+ubuntu-1404一键脚本
+```
+wget https://raw.githubusercontent.com/ruffrey/mailsac/master/install/ubuntu-1404.sh
+sudo sh ubuntu-1404.sh
+```
+安装后去你的域名管理后台添加域名解析
 
-  因此，我们需要在终端中执行 `open /usr/local/Caskroom/sogouinput/3.7.0.1459/安装搜狗输入法.app` 才能进一步完成安装。
+|记录类型       | 主机记录    | 解析线路| 记录值    | MX优先路|
+| ------------- |-------------| :--------:|-------------| -------------| 
+| MX            | @           |  默认     |域名         | 1            |
+| A             | @           |  默认     | IP地址      |  --          |
 
-  我喜欢将候选词个数设置为最大。
+打开http://域名:3000 访问页面
 
-- 欧陆词典:
-
-  我买了一个欧陆的注册码，因为它的很多词库很好用。另外因为词典比较常用，给它设置一个快捷键 `Ctrl + 1`，`欧陆词典` >> `偏好设置` >> `快捷键` >> `显示|隐藏《欧陆词典》窗口` >>按`Ctrl + 1`. 以后只要 `Ctrl + 1`， 就可唤出词典。我还将`翻译选中内容`的快捷键设置为`Ctrl + T `。默认的`激活 Light Peek`快捷键与 Alfred 冲突，去除。
-
-  ![Eudic](http://upload-images.jianshu.io/upload_images/127313-ae3f953d2603cd74.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-  ![Eudic](http://upload-images.jianshu.io/upload_images/127313-ae3f953d2603cd74.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-- [MenuMeters](http://member.ipmu.jp/yuji.tachikawa/MenuMetersElCapitan/)
-  可以在顶部状态栏显示网速，CPU 占用等信息。
