@@ -23,7 +23,11 @@ VPS 从零开始
         * [1 Screen](#screen)
         * [2.Python virtualenv ](#python-virtualenv)
         * [3.ShadowsocksR](#shadowsocksr)
-        * [3.Google coloud](#google-coloud)
+        * [4.Debian/Ubuntu TCP BBR](#debian/ubuntu-tcp-bbr)
+        * [5 Apache2](#apache2)
+        * [2.Python virtualenv ](#python-virtualenv)
+        * [3.ShadowsocksR](#shadowsocksr)
+        * [3.Google coloud](#google-coloud)        
 ### 购买后必须做的事情
 
 
@@ -170,12 +174,14 @@ pip freeze > requirements.txt
 # pip list # 显示已安装库
 pip install -r requirements.txt
 ```
-### ShadowsocksR （目前经常使用的是[Doubi](https://doub.io)大佬的脚本 心疼[BreakWa11](https://breakwa11.blogspot.jp)小姐姐）
+### ShadowsocksR  
+（目前经常使用的是[Doubi](https://doub.io)大佬的脚本 心疼[BreakWa11](https://breakwa11.blogspot.jp)小姐姐）
 安装
 ```
 wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh && bash ssr.sh #下载后可以使用bsah ssr.sh查看以及修改配置
 ```
-### Debian/Ubuntu TCP BBR 改进版/增强版 转自[萌咖](https://moeclub.org/2017/06/24/278/)大佬的脚本
+### Debian/Ubuntu TCP BBR
+Debian/Ubuntu TCP BBR 改进版/增强版 转自[萌咖](https://moeclub.org/2017/06/24/278/)大佬的脚本
 准备:
 使用前,请确认能够开启BBR.
 可参考: [Debian/Ubuntu 开启 TCP BBR 拥塞算法](https://moeclub.org/2017/06/06/249/)
@@ -221,8 +227,9 @@ apt-get update
 apt-get install g++-4.9
 ln -sf `which gcc-4.9` /usr/bin/gcc
 ```
-### 安装web服务 Apache2(最简单的方法让你的VPS变成一个网站）
+### Apache2  
 
+安装web服务 Apache2 (最简单的方法让你的VPS变成一个网站）
 ```
 apt-get update
 apt-get install apache2
