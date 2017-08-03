@@ -121,6 +121,9 @@ Screen命令使用方法
 <br>
 ![Eudic](https://www.vpser.net/uploads/2010/10/screen-ls.jpg)
 <br>
+    
+    
+        
 11791.lnmp即为刚才的screen创建的lnmp会话，目前已经暂时退出了lnmp会话，所以状态为Detached，当使用screen -r lnmp后状态就会变为Attached，11791是这个screen的会话的进程ID，恢复会话时也可以使用：screen -r 11791
 
 1.4 关闭screen的会话
