@@ -99,7 +99,8 @@ reboot
 
 ### screen  
 
-转自 [VPS侦探](https://www.vpser.net）
+转自 [VPS侦探](https://www.vpser.net)  
+
 Screen命令使用方法
 1、常用的使用方法
 
