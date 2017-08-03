@@ -25,7 +25,7 @@ VPS 从零开始
         * [3.ShadowsocksR](#shadowsocksr)
         * [4.Debian/Ubuntu TCP BBR](#debian/ubuntu-tcp-bbr)
         * [5 Apache2](#apache2)
-        * [6.Python virtualenv ](#python-virtualenv)  
+        * [6.临时邮箱系统forsaken-mail/Mailsac ](#临时邮箱系统forsaken-mail/Mailsac )  
         
 ### 购买后必须做的事情
 
