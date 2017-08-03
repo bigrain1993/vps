@@ -21,8 +21,8 @@ VPS 从零开始
         * [4.有问题就重启再说](#有问题就重启再说)
     * [日常使用软件](#日常使用软件)
         * [1.Screen]()  
-        * [2.Python virtualenv ]()
-        * [3.ShadowsocksR](#ShadowsocksR)  
+        * [2.Python virtualenv ]()  
+         * [3.ShadowsocksR](#ShadowsocksR)  
         * [3.Google coloud]()
 
 
