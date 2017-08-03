@@ -74,7 +74,9 @@ passwd 12345678 #为kristina用户名设置密码
 <br>
 2、然后编辑进入配置：
 ```vim /etc/ssh/sshd_config```
+<br>
 找到PermitRootLogin yes，然后后面的Yes改no，如果没有这一行命令，直接将：PermitRootLogin no 加进去。
+<br>
 3、保存后，重启SSH服务，生效。
 ```
 /etc/init.d/ssh restart #centos命令的命令是 /etc/init.d/sshd restart 
