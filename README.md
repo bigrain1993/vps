@@ -131,7 +131,7 @@ Screen命令使用方法
 <span id="jump2"></span>  
 ### python virtualenv  
 
-python virtualenv 虚拟环境 转自[狗仔小分队]（http://xiaofd.win/index.php/archives/6/）
+python virtualenv 虚拟环境 转自[狗仔小分队](http://xiaofd.win/index.php/archives/6/)
 
 安装
 ```
