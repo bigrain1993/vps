@@ -25,8 +25,8 @@ VPS 从零开始
         * [3.ShadowsocksR](#shadowsocksr)
         * [4 Apache2](#apache2)
         * [5.临时邮箱系统](#临时邮箱系统)
-        * [5 Debian/Ubuntu TCP BBR](#debian/ubuntu-tcp-bbr)
-        
+        * [4 Apache2](#apache2)
+        * [5.临时邮箱系统](#临时邮箱系统)
 ### 购买后必须做的事情
 
 
