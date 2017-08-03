@@ -95,9 +95,9 @@ cat /var/log/secure|awk '/Failed/{print $(NF-3)}'|sort|uniq -c|awk '{print $2"="
 reboot
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------
-### 日常使用软件
-<span id="jump1"></span>
-#screen\(转自 VPS侦探 https://www.vpser.net）
+### 日常使用软件  
+
+### screen \(转自 [VPS侦探](https://www.vpser.net）
 Screen命令使用方法
 1、常用的使用方法
 
